@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { ExternalLink, Github, X, Network, Shield, Globe, Database } from 'lucide-react';
-import camera_location from "../public/images/Camera_location.png";
-import zenny_watch from "../public/images/zenny_watch.png";
-import hoppipola_website from "../public/images/hoppipola_website.png";
-import expense_spliter from "../public/images/expense_spliter.png";
-import E_library from "../public/images/E_library.png";
+import camera_location from "../images/Camera_location.png";
+import zenny_watch from "../images/zenny_watch.png";
+import hoppipola_website from "../images/hoppipola_website.png";
+import expense_spliter from "../images/expense_spliter.png";
+import E_library from "../images/E_library.png";
+
 
 interface ProjectsProps {
   darkMode: boolean;
