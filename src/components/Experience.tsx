@@ -9,8 +9,9 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
   const experiences = [
     {
       type: 'work',
-      title: 'Network Engineer',
-      company: 'Current Company',
+      title: 'NOC Engineer',
+      company: 'Leon Communications Technology Pvt Ltd',
+      office: 'NDMC Building,Cannaught Place, New Delhi',
       period: '2024 - Present',
       description: 'Managing enterprise network infrastructure, implementing security protocols, and optimizing network performance. Responsible for troubleshooting complex network issues and maintaining 99.9% uptime.',
       achievements: [
@@ -29,9 +30,9 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
       description: 'python for web development, learned front-end and back-end technologies to build dynamic web applications.',
       achievements: [
         'learned fundamentals of web development',
-        
+
       ],
-      icon: Briefcase,
+      icon: Award,
       color: 'text-green-400'
     },
     {
@@ -44,14 +45,14 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
         'Completed ethical hacking certification',
         'Active participant in cybersecurity communities'
       ],
-      icon: GraduationCap,
+      icon: Award,
       color: 'text-red-400'
     },
 
-{
+    {
       type: 'education',
       title: 'Master in Full-Stack Web Development',
-      company: 'Personal Projects',
+      company: 'Self-Learning & Online Courses',
       period: 'AUG 2023 - FEB 2024',
       description: 'Developing web applications using modern frameworks and technologies. Creating responsive, user-friendly interfaces and robust backend systems.',
       achievements: [
@@ -59,7 +60,7 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
         'Python, React, Flask, Django, and databases ',
         'Deployed applications on cloud platforms'
       ],
-      icon: Briefcase,
+      icon: Award,
       color: 'text-green-400'
     },
     {
@@ -79,9 +80,8 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
   ];
 
   return (
-    <section id="experience" className={`py-20 ${
-      darkMode ? 'bg-gray-900' : 'bg-gradient-to-br from-purple-50 to-cyan-50'
-    }`}>
+    <section id="experience" className={`py-20 ${darkMode ? 'bg-gray-900' : 'bg-gradient-to-br from-purple-50 to-cyan-50'
+      }`}>
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
@@ -95,9 +95,8 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
 
         <div className="relative">
           {/* Timeline Line */}
-          <div className={`absolute left-8 top-0 bottom-0 w-0.5 ${
-            darkMode ? 'bg-cyan-500/30' : 'bg-purple-300'
-          } hidden lg:block`}></div>
+          <div className={`absolute left-8 top-0 bottom-0 w-0.5 ${darkMode ? 'bg-cyan-500/30' : 'bg-purple-300'
+            } hidden lg:block`}></div>
 
           <div className="space-y-12">
             {experiences.map((exp, index) => (
@@ -109,28 +108,30 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
                   </div>
 
                   {/* Content */}
-                  <div className={`flex-1 p-6 rounded-2xl shadow-xl ${
-                    darkMode ? 'bg-gray-800 border border-cyan-500/20' : 'bg-white border border-purple-200'
-                  } hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02]`}>
+                  <div className={`flex-1 p-6 rounded-2xl shadow-xl ${darkMode ? 'bg-gray-800 border border-cyan-500/20' : 'bg-white border border-purple-200'
+                    } hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02]`}>
                     <div className="flex items-start justify-between mb-4">
                       <div>
                         <div className="flex items-center mb-2 lg:hidden">
                           <exp.icon className={`${exp.color} mr-2`} size={20} />
-                          <span className={`text-xs font-semibold px-2 py-1 rounded ${
-                            darkMode ? 'bg-cyan-500/20 text-cyan-400' : 'bg-purple-100 text-purple-600'
-                          }`}>
+                          <span className={`text-xs font-semibold px-2 py-1 rounded ${darkMode ? 'bg-cyan-500/20 text-cyan-400' : 'bg-purple-100 text-purple-600'
+                            }`}>
                             {exp.type}
                           </span>
                         </div>
-                        
-                        <h3 className={`text-xl font-bold ${
-                          darkMode ? 'text-white' : 'text-gray-800'
-                        }`}>
+
+                        <h3 className={`text-xl font-bold ${darkMode ? 'text-white' : 'text-gray-800'
+                          }`}>
                           {exp.title}
                         </h3>
-                        
+
                         <p className={`text-lg ${exp.color} font-semibold`}>
                           {exp.company}
+                          {exp.office && (
+                            <p className={`text-sm  ${darkMode ? 'text-red-300' : 'text-red-600'}`}>
+                              {exp.office}
+                            </p>
+                          )}
                         </p>
                       </div>
 
@@ -142,26 +143,22 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
                       </div>
                     </div>
 
-                    <p className={`text-base mb-6 leading-relaxed ${
-                      darkMode ? 'text-gray-300' : 'text-gray-600'
-                    }`}>
+                    <p className={`text-base mb-6 leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-600'
+                      }`}>
                       {exp.description}
                     </p>
 
                     <div>
-                      <h4 className={`text-sm font-semibold mb-3 ${
-                        darkMode ? 'text-gray-400' : 'text-gray-500'
-                      } uppercase tracking-wide`}>
+                      <h4 className={`text-sm font-semibold mb-3 ${darkMode ? 'text-gray-400' : 'text-gray-500'
+                        } uppercase tracking-wide`}>
                         Key Achievements
                       </h4>
                       <ul className="space-y-2">
                         {exp.achievements.map((achievement, achIndex) => (
-                          <li key={achIndex} className={`flex items-start space-x-2 ${
-                            darkMode ? 'text-gray-300' : 'text-gray-600'
-                          }`}>
-                            <div className={`w-2 h-2 rounded-full ${
-                              darkMode ? 'bg-cyan-400' : 'bg-purple-500'
-                            } mt-2 flex-shrink-0`}></div>
+                          <li key={achIndex} className={`flex items-start space-x-2 ${darkMode ? 'text-gray-300' : 'text-gray-600'
+                            }`}>
+                            <div className={`w-2 h-2 rounded-full ${darkMode ? 'bg-cyan-400' : 'bg-purple-500'
+                              } mt-2 flex-shrink-0`}></div>
                             <span className="text-sm">{achievement}</span>
                           </li>
                         ))}
@@ -183,12 +180,10 @@ const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
               { label: 'Skills Mastered', value: '4+', icon: GraduationCap },
               { label: 'Certifications', value: '8+', icon: Award }
             ].map((stat, index) => (
-              <div key={index} className={`text-center p-6 rounded-xl ${
-                darkMode ? 'bg-gray-800 border border-cyan-500/20' : 'bg-white border border-purple-200'
-              } shadow-lg hover:shadow-xl transition-shadow duration-300`}>
-                <stat.icon className={`mx-auto mb-3 ${
-                  darkMode ? 'text-cyan-400' : 'text-purple-500'
-                }`} size={32} />
+              <div key={index} className={`text-center p-6 rounded-xl ${darkMode ? 'bg-gray-800 border border-cyan-500/20' : 'bg-white border border-purple-200'
+                } shadow-lg hover:shadow-xl transition-shadow duration-300`}>
+                <stat.icon className={`mx-auto mb-3 ${darkMode ? 'text-cyan-400' : 'text-purple-500'
+                  }`} size={32} />
                 <div className="text-2xl font-bold mb-1 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                   {stat.value}
                 </div>

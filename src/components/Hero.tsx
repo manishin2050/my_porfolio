@@ -13,7 +13,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
   const [isDeleting, setIsDeleting] = useState(false);
 
   // Move roles outside component to prevent recreation on every render
-  const roles = ['Network Engineer',  'Full-Stack Developer'];
+  const roles = ['NOC Engineer',  'Full-Stack Developer'];
 
   // Scroll animation hook
   const { elementRef, isVisible } = useScrollAnimation({ threshold: 0.1 });
@@ -131,7 +131,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
           >
             <Terminal className="text-blue-500" size={20} />
             <span className={`text-sm ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-              Network Engineer
+              NOC Engineer
             </span>
           </motion.div>
 

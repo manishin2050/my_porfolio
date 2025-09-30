@@ -7,7 +7,7 @@ interface AboutProps {
 
 const About: React.FC<AboutProps> = ({ darkMode }) => {
   const timeline = [
-    { year: '2024', title: 'Network Engineer', description: 'Started career in networking and infrastructure' },
+    { year: '2024', title: 'NOC Engineer', description: 'Started career in networking and infrastructure' },
     { year: '2024', title: 'Web Development', description: 'certificate in python full-stack development' },
     // { year: '2025', title: 'Programming/coding', description: 'Transitioning into IT field' },
   ];
@@ -41,7 +41,7 @@ const About: React.FC<AboutProps> = ({ darkMode }) => {
               <p className={`text-lg leading-relaxed mb-6 ${
                 darkMode ? 'text-gray-300' : 'text-gray-600'
               }`}>
-                I balance life as a Network Engineer while diving deep into Cybersecurity and Web Development. 
+                I balance life as a NOC Engineer while diving deep into Cybersecurity and Web Development. 
                 My passion lies in automation, building secure systems, and exploring creative code solutions 
                 that bridge the gap between security and user experience.
               </p>
