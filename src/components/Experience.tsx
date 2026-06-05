@@ -8,6 +8,52 @@ interface ExperienceProps {
 const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
   const experiences = [
     {
+      type: 'education',
+      title: 'CCNP ENCOR (350-401) + CCNP ENARSI (300-410)',
+      company: '<packt>',
+      period: ' June 2026',
+      description: 'CCNP ENCOR program helped me deepen my understanding of enterprise networking and strengthened my ability to design, configure, and troubleshoot complex network infrastructures.CCNP ENARSI program helped me strengthen my understanding of enterprise routing and deepened my hands-on skills in managing and troubleshooting complex network infrastructures.',
+      achievements: [
+        'Enterprise network architecture and virtualization',
+        'Enterprise infrastructure design and operations',
+        'Network assurance, security, and automation',
+       ' Advanced routing protocols (OSPF, EIGRP, BGP)',
+ 'VPN technologies and secure connectivity',
+ 'Enterprise network troubleshooting',
+' Infrastructure services and security implementation'
+      ],
+      icon: Award,
+      color: 'text-green-400'
+    },
+    {
+      type: 'education',
+      title: 'CCNA (200-301)',
+      company: '<packt>',
+      period: ' June 2026',
+      description: 'This program helped me strengthen my understanding of core networking concepts and gain hands-on knowledge in configuring and managing enterprise networks.',
+      achievements: [
+         'Networking fundamentals, switching, addressing, and routing',
+         'Wireless networking and IP services',
+         'Network security, automation, and troubleshooting'
+      ],
+      icon: Award,
+      color: 'text-green-400'
+    },
+    {
+      type: 'education',
+      title: 'Google Data Analytics',
+      company: 'Google',
+      period: ' May 2026',
+      description: 'This journey has equipped me with the essential skills to navigate the entire data ecosystem—from collection and cleaning to analysis and visualization.',
+      achievements: [
+        'Mastering SQL, spreadsheet functions',
+        'Python for robust data manipulation.'
+
+      ],
+      icon: Award,
+      color: 'text-green-400'
+    },
+    {
       type: 'work',
       title: 'NOC Engineer',
       company: 'Leon Communications Technology Pvt Ltd',
