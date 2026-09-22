@@ -42,6 +42,9 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
   const scrollToAbout = () => {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
   };
+const scrollToProject = () => {
+    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <motion.section
@@ -189,7 +192,7 @@ const Hero: React.FC<HeroProps> = ({ darkMode }) => {
           transition={{ duration: 0.6, delay: 1.6, ease: "easeOut" }}
         >
           <motion.button
-            onClick={scrollToAbout}
+            onClick={scrollToProject}
             className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105"
             initial={{ opacity: 0, x: -30 }}
             animate={isVisible ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}

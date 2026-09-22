@@ -7,24 +7,24 @@ interface ExperienceProps {
 
 const Experience: React.FC<ExperienceProps> = ({ darkMode }) => {
   const experiences = [
-    {
-      type: 'education',
-      title: 'CCNP ENCOR (350-401) + CCNP ENARSI (300-410)',
-      company: '<packt>',
-      period: ' June 2026',
-      description: 'CCNP ENCOR program helped me deepen my understanding of enterprise networking and strengthened my ability to design, configure, and troubleshoot complex network infrastructures.CCNP ENARSI program helped me strengthen my understanding of enterprise routing and deepened my hands-on skills in managing and troubleshooting complex network infrastructures.',
-      achievements: [
-        'Enterprise network architecture and virtualization',
-        'Enterprise infrastructure design and operations',
-        'Network assurance, security, and automation',
-       ' Advanced routing protocols (OSPF, EIGRP, BGP)',
- 'VPN technologies and secure connectivity',
- 'Enterprise network troubleshooting',
-' Infrastructure services and security implementation'
-      ],
-      icon: Award,
-      color: 'text-green-400'
-    },
+//     {
+//       type: 'education',
+//       title: 'CCNP ENCOR (350-401) + CCNP ENARSI (300-410)',
+//       company: '<packt>',
+//       period: ' June 2026',
+//       description: 'CCNP ENCOR program helped me deepen my understanding of enterprise networking and strengthened my ability to design, configure, and troubleshoot complex network infrastructures.CCNP ENARSI program helped me strengthen my understanding of enterprise routing and deepened my hands-on skills in managing and troubleshooting complex network infrastructures.',
+//       achievements: [
+//         'Enterprise network architecture and virtualization',
+//         'Enterprise infrastructure design and operations',
+//         'Network assurance, security, and automation',
+//        ' Advanced routing protocols (OSPF, EIGRP, BGP)',
+//  'VPN technologies and secure connectivity',
+//  'Enterprise network troubleshooting',
+// ' Infrastructure services and security implementation'
+//       ],
+//       icon: Award,
+//       color: 'text-green-400'
+//     },
     {
       type: 'education',
       title: 'CCNA (200-301)',

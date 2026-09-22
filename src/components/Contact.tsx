@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Github, Instagram, Linkedin, Twitter, Send, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Instagram, Linkedin, Send, CheckCircle,Download } from 'lucide-react';
 
 interface ContactProps {
   darkMode: boolean;
@@ -97,6 +97,12 @@ Message: ${formData.message}`;
       label: 'Instagram',
       href: 'https://www.instagram.com/mr_mehnova/',
       color: 'hover:text-cyan-400'
+    },
+    {
+      icon: Download ,
+      label: 'Download',
+      href: './Manish_Kumar_Mehta_Resume.pdf',
+      color: 'hover:text-red-400'
     }
   ];
 
@@ -159,6 +165,7 @@ Message: ${formData.message}`;
                 {socialLinks.map((social, index) => (
                   <a
                     key={index}
+                    {...(social.label === 'download' && { download: true })}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"

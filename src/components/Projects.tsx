@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github, X, Network, Shield, Globe, Database } from 'lucide-react';
+import { ExternalLink, Github, X, Network, Globe, Database } from 'lucide-react';
 import camera_location from "../images/Camera_location.png";
 import zenny_watch from "../images/zenny_watch.png";
 import hoppipola_website from "../images/hoppipola_website.png";
